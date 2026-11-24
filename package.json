@@ -1,0 +1,31 @@
+{
+  "name": "ertiqaa-erp",
+  "version": "1.0.0",
+  "description": "Ertiqaa ERP - credit case resolution management (local, no deployment needed)",
+  "private": true,
+  "main": "src/server.js",
+  "scripts": {
+    "setup": "npm install",
+    "start": "node scripts/bootstrap.js && node src/server.js",
+    "dev": "node --watch src/server.js",
+    "bootstrap": "node scripts/bootstrap.js",
+    "seed:demo-sql": "node scripts/build-seed.js --out=database/seed.sql --with-schema",
+    "backup": "node scripts/backup.js",
+    "test": "node tests/smoke.test.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.11.5",
+    "pdfkit": "^0.15.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "mysql-memory-server": "^1.18.0"
+  }
+}
